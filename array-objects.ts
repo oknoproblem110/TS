@@ -58,11 +58,12 @@ let obj: {}; // 这样是不行的 这样只能说明 obj是一个非null 非 un
 obj = "Peter";
 
 //正确方法 Record<key的类型, value的类型>
-let objEmpty: Record<string, string | number>; // 前面是 key 的type 后面 是value的type
+let objEmpty: Record<string | number, string | number>; // 前面是 key 的type 后面 是value的type
 
 objEmpty = {
   name: "Peter",
   age: 55,
+  15: 20
 };
 
 console.log(objEmpty);
